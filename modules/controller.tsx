@@ -1,4 +1,4 @@
-function get_source(source_id: number, yayinci_domain: string, kitap_menu: HTMLElement) {
+function get_source_dom(source_id: number, yayinci_domain: string, kitap_menu: HTMLElement) {
   fetch(`https://${yayinci_domain}/mobile_solved/mobile_watch.php?action=source_list&id=${source_id}`)
     .then((resp) => resp.json())
     .then((data) => {
@@ -13,6 +13,14 @@ function get_source(source_id: number, yayinci_domain: string, kitap_menu: HTMLE
         item_list_li = item_list_li + `<li>${element["nm"]}</li>`;
       });
       kitap_menu.innerHTML = `<ul>${item_list_li}</ul>`;
+    });
+}
+
+function get_source(source_id: number, yayinci_domain: string) {
+  fetch(`https://${yayinci_domain}/mobile_solved/mobile_watch.php?action=source_list&id=${source_id}`)
+    .then((resp) => resp.json())
+    .then((data) => {
+      console.log(data);
     });
 }
 

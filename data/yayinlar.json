@@ -1,10 +1,14 @@
 [
   {
-    "isim": "Bilgi Sarmal",
-    "domain": "bilgisarmalvideo.frns.in"
+    "id": 1,
+    "name": "Bilgi Sarmal",
+    "domain": "bilgisarmal.frns.in",
+    "start_point": 5
   },
   {
-    "isim": "Muba",
-    "domain": "muba.frns.in"
+    "id": 2,
+    "name": "Muba",
+    "domain": "muba.frns.in",
+    "start_point": "2"
   }
 ]
